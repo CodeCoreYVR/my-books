@@ -12,7 +12,7 @@ var Book = React.createClass({
     $.ajax({
       url: '/books/' + this.props.details.id,
       type: 'PUT',
-      data: {book: {rating: newRating}}
+      data: {book: {rating: newRating}},
       error: function() {
         // this is now window!
         alert('Could not save!')

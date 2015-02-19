@@ -5,6 +5,7 @@ body {
 .container {
   width: 760px;
   margin: 0 auto;
+  position: relative;
 }
 
 .page {
@@ -16,7 +17,7 @@ body {
     background: #000;
     color: #fff;
     position: relative;
-    padding-top: 30px;
+    padding-top: 35px;
 
     h1 {
       margin: 0;
@@ -28,8 +29,8 @@ body {
 
     .header-actions {
       position: absolute;
-      right: 20px;
-      top: 35%;
+      right: 10px;
+      top: 0px;
 
       a {
         padding: 10px;
@@ -45,7 +46,7 @@ body {
 .book-card {
   position: relative;
   margin-top: 15px;
-  width: 235px;
+  width: 240px;
   background: #fff;
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.09);
   border-radius: 2px;
@@ -55,6 +56,10 @@ body {
   vertical-align: top;
   height: 250px;
   overflow-y: scroll;
+
+  &:nth-child(3) {
+    margin-right: 0;
+  }
 
   h2 {
   }
