@@ -9,6 +9,10 @@ gem 'jquery-rails'
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'googlebooks'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry'
