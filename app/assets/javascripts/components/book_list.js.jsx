@@ -4,7 +4,8 @@ var BookList = React.createClass({
     var books = [];
 
     this.props.books.forEach(function(book) {
-      books.push(<Book details={book} />)
+      books.push(<Book key={book.id}
+                       details={book} />)
     });
 
     return (
