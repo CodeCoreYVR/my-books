@@ -31,7 +31,11 @@ var Book = React.createClass({
       <div className="book-card">
         <div className="book-card-header">
           <img src={this.props.details.image_url} />
-          <h2>{this.props.details.title.substr(0, 15) + "..."}</h2>
+          <h2>
+            <a href={this.props.details.link} title={this.props.details.title} target="_new">
+              {this.props.details.title.substr(0, 15) + "..."}
+            </a>
+          </h2>
           <h3>{this.props.details.authors}</h3>
         </div>
 
