@@ -5,7 +5,6 @@ class HomeController < ApplicationController
   end
 
   def search
-    @books = Book.order('id ASC').all
   end
 
   def perform_search

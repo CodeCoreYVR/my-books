@@ -7,7 +7,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    result = GoogleBooks.search(params[:google_books_id]).to_a.first
+    id = params[:google_books_id].sub(/^-/, '')
+    result = GoogleBooks.search(id).to_a.first
     Book.create_from_api(result)
     render nothing: true
   end

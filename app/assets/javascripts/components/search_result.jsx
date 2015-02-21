@@ -42,7 +42,7 @@ var SearchResult = React.createClass({
         </div>
 
         <div className="book-card-body">
-          <p>{description.substr(0, 180) + "..."}</p>
+          <p>{description.substr(0, 145) + "..."}</p>
         </div>
 
         {footer}
