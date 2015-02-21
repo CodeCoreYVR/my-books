@@ -5,7 +5,7 @@ var Book = React.createClass({
     }
   },
 
-  updateRating: function(newRating) {
+  updateBookRating: function(newRating) {
     /* Send off request to server to inform of state change */
     var oldRating = this.state.rating;
     var thisBookComponent = this;
@@ -25,6 +25,8 @@ var Book = React.createClass({
   },
 
   render: function() {
+    var description = this.props.details.description || "";
+
     return (
       <div className="book-card">
         <div className="book-card-header">
@@ -34,12 +36,12 @@ var Book = React.createClass({
         </div>
 
         <div className="book-card-body">
-          <p>{this.props.details.description.substr(0, 180) + "..."}</p>
+          <p>{description.substr(0, 180) + "..."}</p>
         </div>
 
         <div className="book-card-footer">
-        <StarRating rating={this.state.rating}
-                    onRateBook={this.updateRating} />
+          <StarRating rating={this.state.rating}
+                      onChangeRating={this.updateBookRating} />
         </div>
       </div>
     )

@@ -2,7 +2,7 @@ var StarRating = React.createClass({
   clickStar: function(starNumber) {
     var self = this;
     return function() {
-      self.props.onRateBook(starNumber);
+      self.props.onChangeRating(starNumber);
     }
   },
 

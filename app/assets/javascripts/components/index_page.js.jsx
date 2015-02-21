@@ -1,5 +1,4 @@
 var IndexPage = React.createClass({
-
   render: function() {
     return (
       <div className="page index-page">
@@ -8,7 +7,7 @@ var IndexPage = React.createClass({
             <h1>My Books</h1>
 
             <div className="header-actions">
-              <a href="#">Add a new one</a>
+              <a href="/search">Add a new one</a>
             </div>
           </div>
         </header>
